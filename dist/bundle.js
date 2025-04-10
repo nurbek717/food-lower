@@ -134,7 +134,7 @@ window.addEventListener("DOMContentLoaded", () => {
    }, 1500);
    
    //Timer
-   const deadline = '2025-04-01';
+   const deadline = '2025-6-01';
    
    //ikki sana orasidagi qolgan vaqtni hisoblab berish
    function getTimeReaining(endtime) {
