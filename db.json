@@ -1,0 +1,116 @@
+{
+   "offers":[
+         {
+           "src": "./img/offer1.png",
+           "alt": "Quattro Pasta",
+           "title": "Quattro Pasta",
+           "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.",
+           "discount": 55,
+           "sale": 18
+         },
+         {
+           "src": "./img/offer2.png",
+           "alt": "Vegertarian Pasta",
+           "title": "Vegertarian Pasta",
+           "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.",
+           "discount": 45,
+           "sale": 12
+         },
+         {
+           "src": "./img/offer3.png",
+           "alt": "Gluten-Free Pasta",
+           "title": "Gluten-Free Pasta",
+           "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.",
+           "discount": 67,
+           "sale": 34
+         }
+    ],
+
+    "menu":
+    [
+      {
+        "src": "./img/food1.png",
+        "alt": "LASAL Cheese",
+        "title": "LASAL Cheese",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.",
+        "sale": 18
+      },
+      {
+        "src": "./img/food2.png",
+        "alt": "JUMBO CRAB SHRIMP",
+        "title": "JUMBO CRAB SHRIMP",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.",
+        "sale": 20
+      },
+      {
+        "src": "./img/food3.png",
+        "alt": "KOKTAIL JUCIE",
+        "title": "KOKTAIL JUCIE",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.",
+        "sale": 12
+      },
+      {
+        "src": "./img/food4.png",
+        "alt": "CAPO STEAK",
+        "title": "CAPO STEAK",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.",
+        "sale": 60
+      },
+      {
+        "src": "./img/food5.png",
+        "alt": "ORGANIC FRUIT SALAD",
+        "title": "ORGANIC FRUIT SALAD",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.",
+        "sale": 8
+      },
+      {
+        "src": "./img/food6.png",
+        "alt": "CHEESE PIZZA",
+        "title": "CHEESE PIZZA",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.",
+        "sale": 18
+      },
+      {
+        "src": "./img/food7.jpeg",
+        "alt": "KOFTA MEAT",
+        "title": "KOFTA MEAT",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.",
+        "sale": 40
+      },
+      {
+        "src": "./img/food8.jpeg",
+        "alt": "SPANISH PIES",
+        "title": "SPANISH PIES",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.",
+        "sale": 14
+      },
+      {
+        "src": "./img/food9.jpeg",
+        "alt": "CHEESE TOST",
+        "title": "CHEESE TOST",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.",
+        "sale": 6
+      },
+      {
+        "src": "./img/food10.jpeg",
+        "alt": "FRUIT SALAD",
+        "title": "FRUIT SALAD",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.",
+        "sale": 14
+      },
+      {
+        "src": "./img/food11.jpeg",
+        "alt": "CHICKEN SHAWARMA",
+        "title": "CHICKEN SHAWARMA",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.",
+        "sale": 20
+      },
+      {
+        "src": "./img/food12.jpeg",
+        "alt": "MEGA CHEESE PIZZA",
+        "title": "MEGA CHEESE PIZZA",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.",
+        "sale": 30
+      }
+    ]
+}
