@@ -1,6 +1,5 @@
-function timer() {
-   const deadline = '2025-04-09';
-   
+function timer(deadline, selector) {  
+
    //ikki sana orasidagi qolgan vaqtni hisoblab berish
    function getTimeReaining(endtime) {
       let days,hours,minutes,seconds
@@ -62,6 +61,6 @@ function timer() {
       }
       
    }
-   setClock('.timer', deadline);
+   setClock(selector, deadline);
 }
 export default timer;

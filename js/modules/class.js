@@ -1,3 +1,7 @@
+// import { menuresoursces } from "../services/get-resoursces";
+import getresoursces from "../services/get-resoursces";
+import { menuresoursces } from "../services/get-resoursces";
+
 function clas(selector) {
 
    class OffersMenu{
@@ -29,6 +33,29 @@ function clas(selector) {
          
       }
    }
+ 
+    
+   menuresoursces().then(data => {
+      data.forEach((menu, index) => {
+        const parentSelector = index % 2 === 0 ? ".menu-items-left" : ".menu-items-right";
+        new Menu(menu.src, menu.alt, menu.title, menu.descr, menu.sale, parentSelector).render();
+      });
+    });
+    
+   getresoursces().then(data => {
+      data.forEach(offer => {
+         new OffersMenu(
+            offer.src,
+            offer.alt,
+            offer.title,
+            offer.descr,
+            offer.discount,
+            offer.sale,
+            selector
+         ).render()
+      }) 
+   })
+
    
    class BarOffer extends OffersMenu {
       constructor(src , alt, title, time, perentSelector){
@@ -75,24 +102,6 @@ function clas(selector) {
       }
    ]
 
-
-   fetch("http://localhost:3000/offers", {
-      method:"GET",
-      headers:{"Content-Type": "application/json"}
-   }).then(response => response.json())
-   .then(data => {
-      data.forEach(offer => {
-         new OffersMenu(
-            offer.src,
-            offer.alt,
-            offer.title,
-            offer.descr,
-            offer.discount,
-            offer.sale,
-            selector
-         ).render()
-      }) 
-   })
    
    bars.forEach(bar => {
       new BarOffer(
@@ -136,18 +145,18 @@ function clas(selector) {
       }
    }
 
-   fetch("http://localhost:3000/menu", {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-   })
-   .then(res => res.json())
-   .then(data => {
-      data.forEach((menu, index) => {
-         // Navbatma-navbat left yoki right ga joylash
-         const parentSelector = index % 2 === 0 ? ".menu-items-left" : ".menu-items-right";
-         new Menu(menu.src, menu.alt, menu.title, menu.descr, menu.sale, parentSelector).render();
-      });
-   });
+   // fetch("http://localhost:3000/menu", {
+   //    method: "GET",
+   //    headers: { "Content-Type": "application/json" },
+   // })
+   // .then(res => res.json())
+   // .then(data => {
+   //    data.forEach((menu, index) => {
+   //       // Navbatma-navbat left yoki right ga joylash
+   //       const parentSelector = index % 2 === 0 ? ".menu-items-left" : ".menu-items-right";
+   //       new Menu(menu.src, menu.alt, menu.title, menu.descr, menu.sale, parentSelector).render();
+   //    });
+   // });
 }
 
 export default clas;

@@ -1,44 +1,50 @@
-function modal() {
-   const modalOpenBtns = document.querySelectorAll('[data-modal]'),
-   model = document.querySelector(".modal"),
-   // modelCloseBtn = document.querySelector('[data-modal-close]'),
-   modalFade = document.querySelector(".modal__content")
-   
-   //modal ochadigan funtion
-   function openModal() {
-      modalFade.classList.add("modal_fade")
-      model.classList.add("show")
-      model.classList.remove("hide")
-      document.body.style.overflow = "hidden"
-      clearInterval(modalTimerId)
-   }
-   //modal yopadigan funtion
-   function closeModal()  {
-      model.classList.add("hide")
-      model.classList.remove("show")
-      document.body.style.overflow = ""
-   } 
-   
-   modalOpenBtns.forEach(btn =>{
-      btn.addEventListener("click" , openModal)
-   })
-   
-   
-   model.addEventListener("click" ,  (evt) => {
-      if (evt.target === model || evt.target.getAttribute("data-modal-close") === "") { 
-         closeModal()
-         
-      }
-   })
-   
-   //Escape tugma bosilgan ishga tushadigan code
-   document.addEventListener("keydown" ,(evt) => {
-      if (evt.code === "Escape" && model.classList.contains("show")) {
-         closeModal()
-      }
-   })
-   // 6s dan keyin modal oyna avto kurinadi
-   const modalTimerId = setTimeout(openModal , 5000)
+function openModal(modalContentSelector, modalSelector, modalTimerId) {
+	const modalContent = document.querySelector(modalContentSelector),
+		modal = document.querySelector(modalSelector)
+
+	modalContent.classList.add('modal_fade')
+	modal.classList.add('show')
+	modal.classList.remove('hide')
+	document.body.style.overflow = 'hidden'
+
+	if (modalTimerId) {
+		clearInterval(modalTimerId)
+	}
 }
 
-export default modal;
+function closeModal(modalSelector) {
+	const modal = document.querySelector(modalSelector)
+
+	modal.classList.add('hide')
+	modal.classList.remove('show')
+	document.body.style.overflow = ''
+}
+
+function modal(btnSelector, modalSelector, modalContentSelector, modalTimerId) {
+	const modalOpenBtns = document.querySelectorAll(btnSelector),
+		modal = document.querySelector(modalSelector)
+
+	modalOpenBtns.forEach(btn => {
+		btn.addEventListener('click', () =>
+			openModal(modalContentSelector, modalSelector, modalTimerId)
+		)
+	})
+
+	modal.addEventListener('click', event => {
+		if (
+			event.target === modal ||
+			event.target.getAttribute('data-modal-close') === ''
+		) {
+			closeModal(modalSelector)
+		}
+	})
+
+	document.addEventListener('keydown', event => {
+		if (event.code === 'Escape' && modal.classList.contains('show')) {
+			closeModal(modalSelector)
+		}
+	})
+}
+
+export default modal
+export { closeModal, openModal }

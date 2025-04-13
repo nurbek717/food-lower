@@ -1,5 +1,7 @@
-function forms(params) {
-   const form = document.querySelector("form"),
+import { closeModal, openModal } from './modal'
+
+function forms(formSelector,modalTimerId) {
+   const form = document.querySelector(formSelector),
    teligramBot = "7727019370:AAHphCGDIzzpQmV6_v4t6lW4qE1rfVDaPgQ",
    chatId = '1327028569'
    
@@ -48,7 +50,7 @@ function forms(params) {
    function showStatusMessage(message) {
       const modalDialog = document.querySelector(".modal__dialog")
       modalDialog.classList.add("hide")
-      openModal()
+      openModal('.modal__content', '.modal', modalTimerId)
       
       const statusModal = document.createElement("div")
       statusModal.classList.add("modal__dialog")
@@ -64,9 +66,13 @@ function forms(params) {
       setTimeout(() => {
          statusModal.remove()
          modalDialog.classList.remove("hide")
+         closeModal('.modal')
 
       },3000)
    }
 }
 
 export default forms;
+
+
+
